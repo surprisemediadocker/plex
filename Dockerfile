@@ -3,7 +3,7 @@ MAINTAINER surprisemediadocker <surprisemediadocker@gmail.com>
 
 RUN apt-get -q update && \
     apt-get -qy dist-upgrade && \
-    apt-get install -qy curl \
+    apt-get install -qy curl dbus avahi-daemon \
     && \
     curl -L 'https://plex.tv/downloads/latest/1?channel=8&build=linux-ubuntu-x86_64&distro=ubuntu' -o /tmp/plexmediaserver.deb && \
     dpkg -i /tmp/plexmediaserver.deb && rm -f /tmp/plexmediaserver.deb && \
